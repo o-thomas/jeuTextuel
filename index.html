@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enquête au musée</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+
+</head>
+<body>
+    <div class="col-12 row d-flex justify-content-center" id = "intro">
+        <div id="bilel" class="col-12 text-center">
+                <p id ="text" ></p>
+        </div>
+
+    </div>
+    
+
+<section id="container" class="container m-0 p-0">
+    <div class ="col row">
+
+<div id ="content" class="col-12 row  m-0 ">
+        <h1 class="col-12 text-center" style="color:white;background-color: rgba(0, 0, 0, 0.3);">Cliquez sur les icones pour interroger les suspects</h1>
+
+    <div id="map" class=" d-flex justify-content-center">
+        <img src="carteMusee.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="" alt="steeven" title="steeven"  onclick="phraseSteeven()" coords="130,562,277,454" shape="rect">
+        <area target="" alt="roseta" title="roseta" onclick="phraseRosetta()" coords="130,154,278,270" shape="rect">
+        <area target="" alt="john" title="john" onclick="phraseJohn()" coords="279,455,648,561" shape="rect">
+        <area target="" alt="julietta" title="julietta" onclick="phraseJulietta()" coords="651,272,796,455" shape="rect">
+        <area target="" alt="logan" title="logan" onclick="phraseLogan()" coords="279,453,648,271" shape="rect">
+    </map>
+    </div>
+    </div>
+
+   <div id = "carteId" class ="col-12 row m-0">
+
+           <div id="bil" class="col-12 p-5 row m-0">
+                <div id = "etat" class = " col-4 ">
+                        <p id = "prenom"></p>
+                        <p id="age"></p>
+                        <p id="metier"></p>
+                        <p id ="situation"></p>
+                        <p id ="enfant"></p>
+                        <p id ="naissance"></p>
+                        <p id="cara1"></p>
+                        <p id ="cara2"></p>
+                        <p id="cara3"></p>
+
+                    </div>
+                    <div class="col-6 text-center">
+                        <h1 id ="nomPiece">piece</h1>
+                    </div>
+                <div id ="fermee" class="col-2 ">
+                    <input id = "ferme" type ="button" value="Retour à la carte" class="btn btn-light" onclick = "reset()">
+                </div>
+                <div id="bouton" class ="col-12 row">
+                            <input id ="quest1" type="button" class = "btn  col d-flex flex-wrap text-left "  value="Question 1">
+                             <p id = "reponse1" class="col-12 text-right" ></p>
+                             <input id ="quest2" type="button" class ="m-0 btn    col-12 text-left  "   value="Question 2">
+                             <p id = "reponse2"  class="col-12 text-right" ></p>
+                             <input id ="quest3" type="button" class =" btn     col-12 text-left "   value="Question 3">
+                             <p id = "reponse3" class="col-12 text-right" ></p>
+                             <input id ="quest4" type="button" class =" btn   col-12 text-left"   value="Question 4">
+                             <p id = "reponse4" class="col-12 text-right " ></p>
+                        </div>
+                </div>
+           </div>
+
+
+
+
+
+
+   </div>
+
+
+   <div>
+
+   </div>
+</div>
+
+
+<div id = "epilogue" class="col-12 row d-flex justify-content-center p-5">
+ <p id ="epi" class="col-12 text-center m-0 p-0 p-3" ></p>
+ <div id ="bouton-epi" class="col-8 row text-center p-3">
+ <input type="button" onclick="epilogue2()" value = "Le laisser partir et prendre le vase.">
+ <input type="button" onclick="epilogue3()" value = "Le livrer à la securité et prendre le vase.">
+</div>
+<div id="bouton-continu">
+        <input type="button" onclick="epilogue2bis()" value = "Continuer">
+    </div>
+<div id="form" class="col-8 row text-center p-3">
+        <label for 'reponseUser' class="col-12 text-center">Écrivez votre texte :</label>
+         <input id='phrase' class="col-12 text-center" type ='text'>
+         <input type='button' class="col-12" value='ok' onclick = 'sentenceMemory(), terminer()'>
+
+</div >
+
+            <div id = "fin" class="col-8 p-3 ">
+            <h1> Félicitations ! Vous avez terminé la partie ! </h1>
+            <a href="accueil.html"> <input type="button"  value = "recommencer"></a>
+    </div>
+    
+</div>
+
+</section>
+
+    <script src="script.js"> </script>
+    <audio  preload="auto" loop autoplay>
+        <source src="lanoir.mp3" type="audio/mp3" />
+        <body onload="introduction();"></body>
+</body>
+</html>

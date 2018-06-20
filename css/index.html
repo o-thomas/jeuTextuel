@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>enquete au musé</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    
+    
+</head>
+<body>
+    <div id = "intro">
+      <p id ="text"></p>
+    </div>
+    <div id="reset">
+    <input type="button" onclick="reset()">
+    </div>
+
+<section id="container" class="container">
+    <div class ="row">
+   
+<div id ="content">
+    <div id="map">
+        <img src="carteMusee.png" usemap="#image-map">
+
+    <map name="image-map">
+        <area target="" alt="steeven" title="steeven"  onclick="phraseSteeven()" coords="130,562,277,454" shape="rect">
+        <area target="" alt="roseta" title="roseta" onclick="phraseRosetta()" coords="130,154,278,270" shape="rect">
+        <area target="" alt="john" title="john" onclick="phraseJohn()" coords="279,455,648,561" shape="rect">
+        <area target="" alt="julietta" title="julietta" onclick="phraseJulietta()" coords="651,272,796,455" shape="rect">
+        <area target="" alt="logan" title="logan" onclick="phraseLogan()" coords="279,453,648,271" shape="rect">
+    </map>
+    </div>
+    </div>
+    
+   <div id = "carteId" class =" row">
+       <div id ="fermee">
+    <input id = "ferme" type ="button" value="fermer" class="btn btn-danger" onclick = "reset()">
+    </div>
+       <div id = "etat" class = "offset-4 col-5">
+           <p id = "prenom"></p>
+           <p id="age"></p>
+           <p id="metier"></p>
+           <p id ="situation"></p>
+           <p id ="enfant"></p>
+           <p id ="naissance"></p>
+           <p id="cara1"></p>
+           <p id ="cara2"></p>
+           <p id="cara3"></p>
+           
+       </div>
+      
+       <div id="bouton" class ="col-12">
+           <input id ="quest1" type="button" class = "btn btn-primary"  value="Question 1">
+           <p id = "reponse1" >
+      
+           </p>
+           <input id ="quest2" class ="offset-1 btn btn-primary" type="button"  value="Question 2">
+           <p id = "reponse2" >
+      
+           </p>
+           
+           <input id ="quest3" type="button" class = "btn btn-primary"  value="Question 1">
+           <p id = "reponse3" >
+      
+           </p>
+
+           <input id ="quest4" type="button" class = "btn btn-primary"  value="Question 1">
+           <p id = "reponse4" >
+      
+           </p>
+       </div>
+       
+
+   </div>
+
+
+   <div>
+
+   </div>
+</div>
+
+
+<div id = "epilogue">
+ <p id ="epi" ></p>
+ <div id ="bouton-epi">
+ <input type="button" onclick="epilogue2()" value = "le laisser partir et prendre le vase">
+ <input type="button" onclick="epilogue3()" value = "le livrer a la securité et prendre le vase">
+</div>
+<div id="form">
+        <label for 'reponseUser'>ecriver votre texte</label>
+         <input id='phrase' type ='text'>
+         <input type='button' value='ok' onclick = 'sentenceMemory(), terminer()'> 
+
+</div >
+    
+            <div id = "fin">
+            <h1> bravo Vous avez terminer la partie ! </h1> 
+            
+    </div>
+</div>
+
+</section>
+
+    <script src="script.js"> </script>
+    <audio  preload="auto" loop autoplay>
+        <source src="lanoir.mp3" type="audio/mp3" />
+        <body onload="introduction();"></body>
+</body>
+</html>
